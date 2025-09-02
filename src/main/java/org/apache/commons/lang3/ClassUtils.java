@@ -471,6 +471,7 @@ public class ClassUtils {
      *
      * @param name the name of class.
      * @return canonical form of class name.
+     * @throws IllegalArgumentException if the class name is invalid
      */
     private static String getCanonicalName(final String name) {
         String className = StringUtils.deleteWhitespace(name);
@@ -478,20 +479,33 @@ public class ClassUtils {
             return null;
         }
         int dim = 0;
-        while (className.charAt(dim) == '[') {
+        final int len = className.length();
+        while (dim < len && className.charAt(dim) == '[') {
             dim++;
             if (dim > MAX_DIMENSIONS) {
                 throw new IllegalArgumentException(String.format("Maximum array dimension %d exceeded", MAX_DIMENSIONS));
             }
+        }
+        if (dim >= len) {
+            throw new IllegalArgumentException(String.format("Invalid class name %s", name));
         }
         if (dim < 1) {
             return className;
         }
         className = className.substring(dim);
         if (className.startsWith("L")) {
-            className = className.substring(1, className.endsWith(";") ? className.length() - 1 : className.length());
-        } else if (!className.isEmpty()) {
-            className = REVERSE_ABBREVIATION_MAP.get(className.substring(0, 1));
+            if (!className.endsWith(";") || className.length() < 3) {
+                throw new IllegalArgumentException(String.format("Invalid class name %s", name));
+            }
+            className = className.substring(1, className.length() - 1);
+        } else if (className.length() == 1) {
+            final String primitive = REVERSE_ABBREVIATION_MAP.get(className.substring(0, 1));
+            if (primitive == null) {
+                throw new IllegalArgumentException(String.format("Invalid class name %s", name));
+            }
+            className = primitive;
+        } else {
+            throw new IllegalArgumentException(String.format("Invalid class name %s", name));
         }
         final StringBuilder canonicalClassNameBuffer = new StringBuilder(className.length() + dim * 2);
         canonicalClassNameBuffer.append(className);
@@ -719,28 +733,30 @@ public class ClassUtils {
      * Gets the package name from a {@link String}.
      *
      * <p>
-     * The string passed in is assumed to be a class name - it is not checked.
+     * The string passed in is assumed to be a class name.
      * </p>
      * <p>
      * If the class is unpackaged, return an empty string.
      * </p>
      *
-     * @param className the className to get the package name for, may be {@code null}
-     * @return the package name or an empty string
+     * @param className the className to get the package name for, may be {@code null}.
+     * @return the package name or an empty string.
      */
     public static String getPackageName(String className) {
         if (StringUtils.isEmpty(className)) {
             return StringUtils.EMPTY;
         }
+        int i = 0;
         // Strip array encoding
-        while (className.charAt(0) == '[') {
-            className = className.substring(1);
+        while (className.charAt(i) == '[') {
+            i++;
         }
+        className = className.substring(i);
         // Strip Object type encoding
         if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
             className = className.substring(1);
         }
-        final int i = className.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
+        i = className.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
         if (i == -1) {
             return StringUtils.EMPTY;
         }
@@ -823,7 +839,7 @@ public class ClassUtils {
      * @see Class#getCanonicalName()
      */
     public static String getShortCanonicalName(final Object object, final String valueIfNull) {
-        return object == null ? valueIfNull : getShortCanonicalName(object.getClass().getCanonicalName());
+        return object == null ? valueIfNull : getShortCanonicalName(object.getClass());
     }
 
     /**

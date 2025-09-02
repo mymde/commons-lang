@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.Serializable;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -38,6 +39,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.function.Function;
 
 import org.apache.commons.lang3.ClassUtils.Interfaces;
 import org.apache.commons.lang3.reflect.testbed.GenericConsumer;
@@ -444,17 +446,19 @@ class ClassUtilsTest extends AbstractLangTest {
         assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("org.apache.commons.lang3.ClassUtils"));
         assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("[Lorg.apache.commons.lang3.ClassUtils;"));
         assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("[[Lorg.apache.commons.lang3.ClassUtils;"));
+        assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[Lorg.apache.commons.lang3.ClassUtils;"));
         assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("org.apache.commons.lang3.ClassUtils[]"));
         assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("org.apache.commons.lang3.ClassUtils[][]"));
+        assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("org.apache.commons.lang3.ClassUtils[][][][][][][][][][][][][][][][]"));
         assertEquals("", ClassUtils.getPackageCanonicalName("[I"));
         assertEquals("", ClassUtils.getPackageCanonicalName("[[I"));
         assertEquals("", ClassUtils.getPackageCanonicalName("int[]"));
         assertEquals("", ClassUtils.getPackageCanonicalName("int[][]"));
-
         // Inner types
         assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("org.apache.commons.lang3.ClassUtilsTest$6"));
         assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("org.apache.commons.lang3.ClassUtilsTest$5Named"));
         assertEquals("org.apache.commons.lang3", ClassUtils.getPackageCanonicalName("org.apache.commons.lang3.ClassUtilsTest$Inner"));
+        assertEquals("a.b.c.D.e.f", ClassUtils.getPackageCanonicalName("a.b.c.D.e.f.D"));
     }
 
     @Test
@@ -462,10 +466,8 @@ class ClassUtilsTest extends AbstractLangTest {
         assertEquals("java.lang", ClassUtils.getPackageName(String.class));
         assertEquals("java.util", ClassUtils.getPackageName(Map.Entry.class));
         assertEquals("", ClassUtils.getPackageName((Class<?>) null));
-
         // LANG-535
         assertEquals("java.lang", ClassUtils.getPackageName(String[].class));
-
         // Primitive Arrays
         assertEquals("", ClassUtils.getPackageName(boolean[].class));
         assertEquals("", ClassUtils.getPackageName(byte[].class));
@@ -475,12 +477,10 @@ class ClassUtilsTest extends AbstractLangTest {
         assertEquals("", ClassUtils.getPackageName(long[].class));
         assertEquals("", ClassUtils.getPackageName(float[].class));
         assertEquals("", ClassUtils.getPackageName(double[].class));
-
         // Arrays of arrays of ...
         assertEquals("java.lang", ClassUtils.getPackageName(String[][].class));
         assertEquals("java.lang", ClassUtils.getPackageName(String[][][].class));
         assertEquals("java.lang", ClassUtils.getPackageName(String[][][][].class));
-
         // On-the-fly types
         final class Named {
             // empty
@@ -489,6 +489,10 @@ class ClassUtilsTest extends AbstractLangTest {
             // empty
         }.getClass()));
         assertEquals("org.apache.commons.lang3", ClassUtils.getPackageName(Named.class));
+        assertEquals("org.apache.commons.lang3", ClassUtils.getPackageName(new Serializable() {
+            private static final long serialVersionUID = 1L;
+        }.getClass()));
+        assertEquals("java.util.function", ClassUtils.getPackageName(Function.identity().getClass()));
     }
 
     @Test
@@ -513,6 +517,7 @@ class ClassUtilsTest extends AbstractLangTest {
         assertEquals("ClassUtils[][]", ClassUtils.getShortCanonicalName(ClassUtils[][].class));
         assertEquals("int[]", ClassUtils.getShortCanonicalName(int[].class));
         assertEquals("int[][]", ClassUtils.getShortCanonicalName(int[][].class));
+        assertEquals("int[][][][][][][][][][]", ClassUtils.getShortCanonicalName(int[][][][][][][][][][].class));
 
         // Inner types
         final class Named {
@@ -535,6 +540,7 @@ class ClassUtilsTest extends AbstractLangTest {
         assertEquals("ClassUtils[][]", ClassUtils.getShortCanonicalName(new ClassUtils[0][0], "<null>"));
         assertEquals("int[]", ClassUtils.getShortCanonicalName(new int[0], "<null>"));
         assertEquals("int[][]", ClassUtils.getShortCanonicalName(new int[0][0], "<null>"));
+        assertEquals("int[][][][][][][][][][]", ClassUtils.getShortCanonicalName(new int[0][0][0][0][0][0][0][0][0][0], "<null>"));
 
         // Inner types
         final class Named {
@@ -563,6 +569,7 @@ class ClassUtilsTest extends AbstractLangTest {
         assertEquals("int[][]", ClassUtils.getShortCanonicalName("[[I"));
         assertEquals("int[]", ClassUtils.getShortCanonicalName("int[]"));
         assertEquals("int[][]", ClassUtils.getShortCanonicalName("int[][]"));
+        assertEquals("int[][][][][][][][][][][][]", ClassUtils.getShortCanonicalName("int[][][][][][][][][][][][]"));
         // this is to demonstrate that the documentation and the naming of the methods
         // uses the class name and canonical name totally mixed up, which cannot be
         // fixed without backward compatibility break
@@ -578,22 +585,26 @@ class ClassUtilsTest extends AbstractLangTest {
         assertEquals("ClassUtilsTest.5Named", ClassUtils.getShortCanonicalName("org.apache.commons.lang3.ClassUtilsTest$5Named"));
         assertEquals("ClassUtilsTest.Inner", ClassUtils.getShortCanonicalName("org.apache.commons.lang3.ClassUtilsTest$Inner"));
         // demonstrating what a canonical name is... it is a bigger issue to clean this up
-        assertEquals("org.apache.commons.lang3.ClassUtilsTest$10", new org.apache.commons.lang3.ClassUtilsTest() {
+        assertEquals("org.apache.commons.lang3.ClassUtilsTest$11", new org.apache.commons.lang3.ClassUtilsTest() {
         }.getClass().getName());
         assertNull(new org.apache.commons.lang3.ClassUtilsTest() {
         }.getClass().getCanonicalName());
         assertEquals("String[]", ClassUtils.getShortCanonicalName(String[].class.getName()));
         assertEquals("String[]", ClassUtils.getShortCanonicalName(String[].class.getCanonicalName()));
         assertEquals("String[]", ClassUtils.getShortCanonicalName("String[]"));
-        // Note that we throw RuntimeException (but not which one) for the following bad inputs:
-        assertThrows(RuntimeException.class, () -> ClassUtils.getShortCanonicalName(""));
-        assertThrows(RuntimeException.class, () -> ClassUtils.getShortCanonicalName("["));
-        assertThrows(RuntimeException.class, () -> ClassUtils.getShortCanonicalName("[]"));
-        assertThrows(RuntimeException.class, () -> ClassUtils.getShortCanonicalName("[;"));
-        assertThrows(RuntimeException.class, () -> ClassUtils.getShortCanonicalName("[];"));
-        assertThrows(RuntimeException.class, () -> ClassUtils.getShortCanonicalName(" "));
-        assertThrows(RuntimeException.class, () -> ClassUtils.getShortCanonicalName("[$"));
-        assertThrows(RuntimeException.class, () -> ClassUtils.getShortCanonicalName("[$a"));
+        // Note that we throw IllegalArgumentException for the following bad inputs:
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName(""));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("["));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("[]"));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("[;"));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("[];"));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName(" "));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("[$"));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("[$a"));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("[["));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("[[L"));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("[org.apache.commons.lang3.ClassUtilsTest"));
+        assertThrows(IllegalArgumentException.class, () -> ClassUtils.getShortCanonicalName("[Lorg.apache.commons.lang3.ClassUtilsTest"));
     }
 
     @Test
@@ -636,7 +647,7 @@ class ClassUtilsTest extends AbstractLangTest {
             // empty
         }
         // WARNING: this is fragile, implementation may change, naming is not guaranteed
-        assertEquals("ClassUtilsTest.12", ClassUtils.getShortClassName(new Object() {
+        assertEquals("ClassUtilsTest.13", ClassUtils.getShortClassName(new Object() {
             // empty
         }.getClass()));
         // WARNING: this is fragile, implementation may change, naming is not guaranteed
@@ -656,7 +667,7 @@ class ClassUtilsTest extends AbstractLangTest {
             // empty
         }
         // WARNING: this is fragile, implementation may change, naming is not guaranteed
-        assertEquals("ClassUtilsTest.13", ClassUtils.getShortClassName(new Object() {
+        assertEquals("ClassUtilsTest.14", ClassUtils.getShortClassName(new Object() {
             // empty
         }, "<null>"));
         // WARNING: this is fragile, implementation may change, naming is not guaranteed
