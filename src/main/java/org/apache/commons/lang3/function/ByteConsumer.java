@@ -21,50 +21,48 @@ import java.util.Objects;
 import java.util.function.IntConsumer;
 
 /**
- * A functional interface like {@link IntConsumer} that declares a {@link Throwable}.
+ * A functional interface like {@link IntConsumer} but for {@code byte}.
  *
- * @param <E> The kind of thrown exception or error.
- * @since 3.11
+ * @see IntConsumer
+ * @since 3.19.0
  */
 @FunctionalInterface
-public interface FailableIntConsumer<E extends Throwable> {
+public interface ByteConsumer {
 
     /** NOP singleton */
-    @SuppressWarnings("rawtypes")
-    FailableIntConsumer NOP = t -> { /* NOP */ };
+    ByteConsumer NOP = t -> {
+        /* NOP */ };
 
     /**
      * Gets the NOP singleton.
      *
-     * @param <E> The kind of thrown exception or error.
      * @return The NOP singleton.
      */
-    @SuppressWarnings("unchecked")
-    static <E extends Throwable> FailableIntConsumer<E> nop() {
+    static ByteConsumer nop() {
         return NOP;
     }
 
     /**
      * Accepts the given arguments.
      *
-     * @param value the parameter for the consumable to accept
-     * @throws E Thrown when the consumer fails.
+     * @param value the input argument
      */
-    void accept(int value) throws E;
+    void accept(byte value);
 
     /**
-     * Returns a composed {@link FailableIntConsumer} like {@link IntConsumer#andThen(IntConsumer)}.
+     * Returns a composed {@link ByteConsumer} that performs, in sequence, this operation followed by the {@code after} operation. If performing either
+     * operation throws an exception, it is relayed to the caller of the composed operation. If performing this operation throws an exception, the {@code after}
+     * operation will not be performed.
      *
-     * @param after the operation to perform after this one.
-     * @return a composed {@link FailableIntConsumer} like {@link IntConsumer#andThen(IntConsumer)}.
+     * @param after the operation to perform after this operation
+     * @return a composed {@link ByteConsumer} that performs in sequence this operation followed by the {@code after} operation
      * @throws NullPointerException if {@code after} is null
      */
-    default FailableIntConsumer<E> andThen(final FailableIntConsumer<E> after) {
+    default ByteConsumer andThen(final ByteConsumer after) {
         Objects.requireNonNull(after);
-        return (final int t) -> {
+        return (final byte t) -> {
             accept(t);
             after.accept(t);
         };
     }
-
 }

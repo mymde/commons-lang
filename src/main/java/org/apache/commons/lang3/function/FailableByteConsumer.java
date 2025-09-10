@@ -21,17 +21,17 @@ import java.util.Objects;
 import java.util.function.IntConsumer;
 
 /**
- * A functional interface like {@link IntConsumer} that declares a {@link Throwable}.
+ * A functional interface like {@link ByteConsumer} that declares a {@link Throwable}.
  *
  * @param <E> The kind of thrown exception or error.
  * @since 3.11
  */
 @FunctionalInterface
-public interface FailableIntConsumer<E extends Throwable> {
+public interface FailableByteConsumer<E extends Throwable> {
 
     /** NOP singleton */
     @SuppressWarnings("rawtypes")
-    FailableIntConsumer NOP = t -> { /* NOP */ };
+    FailableByteConsumer NOP = t -> { /* NOP */ };
 
     /**
      * Gets the NOP singleton.
@@ -40,7 +40,7 @@ public interface FailableIntConsumer<E extends Throwable> {
      * @return The NOP singleton.
      */
     @SuppressWarnings("unchecked")
-    static <E extends Throwable> FailableIntConsumer<E> nop() {
+    static <E extends Throwable> FailableByteConsumer<E> nop() {
         return NOP;
     }
 
@@ -50,18 +50,18 @@ public interface FailableIntConsumer<E extends Throwable> {
      * @param value the parameter for the consumable to accept
      * @throws E Thrown when the consumer fails.
      */
-    void accept(int value) throws E;
+    void accept(byte value) throws E;
 
     /**
-     * Returns a composed {@link FailableIntConsumer} like {@link IntConsumer#andThen(IntConsumer)}.
+     * Returns a composed {@link FailableByteConsumer} like {@link IntConsumer#andThen(IntConsumer)}.
      *
      * @param after the operation to perform after this one.
-     * @return a composed {@link FailableIntConsumer} like {@link IntConsumer#andThen(IntConsumer)}.
+     * @return a composed {@link FailableByteConsumer} like {@link IntConsumer#andThen(IntConsumer)}.
      * @throws NullPointerException if {@code after} is null
      */
-    default FailableIntConsumer<E> andThen(final FailableIntConsumer<E> after) {
+    default FailableByteConsumer<E> andThen(final FailableByteConsumer<E> after) {
         Objects.requireNonNull(after);
-        return (final int t) -> {
+        return (final byte t) -> {
             accept(t);
             after.accept(t);
         };
