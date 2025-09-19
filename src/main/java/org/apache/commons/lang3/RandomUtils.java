@@ -106,9 +106,9 @@ public class RandomUtils {
     /**
      * Generates a random boolean value.
      *
-     * @return the random boolean
+     * @return the random boolean.
      * @since 3.5
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static boolean nextBoolean() {
@@ -118,10 +118,10 @@ public class RandomUtils {
     /**
      * Generates an array of random bytes.
      *
-     * @param count the size of the returned array
-     * @return the random byte array
-     * @throws IllegalArgumentException if {@code count} is negative
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @param count the size of the returned array.
+     * @return the random byte array.
+     * @throws IllegalArgumentException if {@code count} is negative.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static byte[] nextBytes(final int count) {
@@ -131,10 +131,10 @@ public class RandomUtils {
     /**
      * Generates a random double between 0 (inclusive) and Double.MAX_VALUE (exclusive).
      *
-     * @return the random double
+     * @return the random double.
      * @see #nextDouble(double, double)
      * @since 3.5
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static double nextDouble() {
@@ -144,12 +144,11 @@ public class RandomUtils {
     /**
      * Generates a random double within the specified range.
      *
-     * @param startInclusive the smallest value that can be returned, must be non-negative
-     * @param endExclusive   the upper bound (not included)
-     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is
-     *                                  negative
-     * @return the random double
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @param startInclusive the smallest value that can be returned, must be non-negative.
+     * @param endExclusive   the upper bound (not included).
+     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is negative.
+     * @return the random double.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static double nextDouble(final double startInclusive, final double endExclusive) {
@@ -159,10 +158,10 @@ public class RandomUtils {
     /**
      * Generates a random float between 0 (inclusive) and Float.MAX_VALUE (exclusive).
      *
-     * @return the random float
+     * @return the random float.
      * @see #nextFloat(float, float)
      * @since 3.5
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static float nextFloat() {
@@ -172,12 +171,11 @@ public class RandomUtils {
     /**
      * Generates a random float within the specified range.
      *
-     * @param startInclusive the smallest value that can be returned, must be non-negative
-     * @param endExclusive   the upper bound (not included)
-     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is
-     *                                  negative
+     * @param startInclusive the smallest value that can be returned, must be non-negative.
+     * @param endExclusive   the upper bound (not included).
+     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is negative.
      * @return the random float
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static float nextFloat(final float startInclusive, final float endExclusive) {
@@ -187,10 +185,10 @@ public class RandomUtils {
     /**
      * Generates a random int between 0 (inclusive) and Integer.MAX_VALUE (exclusive).
      *
-     * @return the random integer
+     * @return the random integer.
      * @see #nextInt(int, int)
      * @since 3.5
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static int nextInt() {
@@ -200,12 +198,11 @@ public class RandomUtils {
     /**
      * Generates a random integer within the specified range.
      *
-     * @param startInclusive the smallest value that can be returned, must be non-negative
-     * @param endExclusive   the upper bound (not included)
-     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is
-     *                                  negative
-     * @return the random integer
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @param startInclusive the smallest value that can be returned, must be non-negative.
+     * @param endExclusive   the upper bound (not included).
+     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is negative.
+     * @return the random integer.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static int nextInt(final int startInclusive, final int endExclusive) {
@@ -215,10 +212,10 @@ public class RandomUtils {
     /**
      * Generates a random long between 0 (inclusive) and Long.MAX_VALUE (exclusive).
      *
-     * @return the random long
+     * @return the random long.
      * @see #nextLong(long, long)
      * @since 3.5
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static long nextLong() {
@@ -228,12 +225,11 @@ public class RandomUtils {
     /**
      * Generates a random long within the specified range.
      *
-     * @param startInclusive the smallest value that can be returned, must be non-negative
-     * @param endExclusive   the upper bound (not included)
-     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is
-     *                                  negative
-     * @return the random long
-     * @deprecated Use {@link #secure()}, {@link #secureStrong()},or {@link #insecure()}.
+     * @param startInclusive the smallest value that can be returned, must be non-negative.
+     * @param endExclusive   the upper bound (not included).
+     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is negative.
+     * @return the random long.
+     * @deprecated Use {@link #secure()}, {@link #secureStrong()}, or {@link #insecure()}.
      */
     @Deprecated
     public static long nextLong(final long startInclusive, final long endExclusive) {
@@ -301,7 +297,7 @@ public class RandomUtils {
     /**
      * Generates a random boolean value.
      *
-     * @return the random boolean
+     * @return the random boolean.
      * @since 3.16.0
      */
     public boolean randomBoolean() {
@@ -311,8 +307,8 @@ public class RandomUtils {
     /**
      * Generates an array of random bytes.
      *
-     * @param count the size of the returned array
-     * @return the random byte array
+     * @param count the size of the returned array.
+     * @return the random byte array.
      * @throws IllegalArgumentException if {@code count} is negative
      * @since 3.16.0
      */
@@ -326,7 +322,7 @@ public class RandomUtils {
     /**
      * Generates a random double between 0 (inclusive) and Double.MAX_VALUE (exclusive).
      *
-     * @return the random double
+     * @return the random double.
      * @see #randomDouble(double, double)
      * @since 3.16.0
      */
@@ -337,10 +333,9 @@ public class RandomUtils {
     /**
      * Generates a random double within the specified range.
      *
-     * @param startInclusive the smallest value that can be returned, must be non-negative
-     * @param endExclusive   the upper bound (not included)
-     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is
-     *                                  negative
+     * @param startInclusive the smallest value that can be returned, must be non-negative.
+     * @param endExclusive   the upper bound (not included).
+     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is negative.
      * @return the random double
      * @since 3.16.0
      */
@@ -356,7 +351,7 @@ public class RandomUtils {
     /**
      * Generates a random float between 0 (inclusive) and Float.MAX_VALUE (exclusive).
      *
-     * @return the random float
+     * @return the random float.
      * @see #randomFloat(float, float)
      * @since 3.16.0
      */
@@ -367,11 +362,10 @@ public class RandomUtils {
     /**
      * Generates a random float within the specified range.
      *
-     * @param startInclusive the smallest value that can be returned, must be non-negative
-     * @param endExclusive   the upper bound (not included)
-     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is
-     *                                  negative
-     * @return the random float
+     * @param startInclusive the smallest value that can be returned, must be non-negative.
+     * @param endExclusive   the upper bound (not included).
+     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is negative.
+     * @return the random float.
      */
     public float randomFloat(final float startInclusive, final float endExclusive) {
         Validate.isTrue(endExclusive >= startInclusive, "Start value must be smaller or equal to end value.");
@@ -385,7 +379,7 @@ public class RandomUtils {
     /**
      * Generates a random int between 0 (inclusive) and Integer.MAX_VALUE (exclusive).
      *
-     * @return the random integer
+     * @return the random integer.
      * @see #randomInt(int, int)
      * @since 3.16.0
      */
@@ -396,11 +390,10 @@ public class RandomUtils {
     /**
      * Generates a random integer within the specified range.
      *
-     * @param startInclusive the smallest value that can be returned, must be non-negative
-     * @param endExclusive   the upper bound (not included)
-     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is
-     *                                  negative
-     * @return the random integer
+     * @param startInclusive the smallest value that can be returned, must be non-negative.
+     * @param endExclusive   the upper bound (not included).
+     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is negative.
+     * @return the random integer.
      * @since 3.16.0
      */
     public int randomInt(final int startInclusive, final int endExclusive) {
@@ -415,7 +408,7 @@ public class RandomUtils {
     /**
      * Generates a random long between 0 (inclusive) and Long.MAX_VALUE (exclusive).
      *
-     * @return the random long
+     * @return the random long.
      * @see #randomLong(long, long)
      * @since 3.16.0
      */
@@ -443,11 +436,10 @@ public class RandomUtils {
     /**
      * Generates a random long within the specified range.
      *
-     * @param startInclusive the smallest value that can be returned, must be non-negative
-     * @param endExclusive   the upper bound (not included)
-     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is
-     *                                  negative
-     * @return the random long
+     * @param startInclusive the smallest value that can be returned, must be non-negative.
+     * @param endExclusive   the upper bound (not included).
+     * @throws IllegalArgumentException if {@code startInclusive > endExclusive} or if {@code startInclusive} is negative.
+     * @return the random long.
      * @since 3.16.0
      */
     public long randomLong(final long startInclusive, final long endExclusive) {

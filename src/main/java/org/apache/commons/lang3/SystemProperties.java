@@ -25,9 +25,9 @@ import java.util.function.Supplier;
 import org.apache.commons.lang3.function.Suppliers;
 
 /**
- * Accesses current system property names and values.
+ * Accesses current <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Property</a> names and values.
  *
- * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+ * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
  * @since 3.13.0
  */
 public final class SystemProperties {
@@ -35,7 +35,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/TrayIcon.html#apple.awt.enableTemplateImages">apple.awt.enableTemplateImages</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/TrayIcon.html#apple.awt.enableTemplateImages">apple.awt.enableTemplateImages</a>
      * @since 3.15.0
      */
     public static final String APPLE_AWT_ENABLE_TEMPLATE_IMAGES = "apple.awt.enableTemplateImages";
@@ -43,18 +43,20 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      * <p>
-     * Not in Java 17 and 21 (Javadoc).
+     * Not in Java 17 and above according to <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a> Javadoc.
      * </p>
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static final String AWT_TOOLKIT = "awt.toolkit";
 
     /**
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.naming/module-summary.html#com.sun.jndi.ldap.object.trustSerialData">com.sun.jndi.ldap.object.trustSerialData</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.naming/module-summary.html#com.sun.jndi.ldap.object.trustSerialData">com.sun.jndi.ldap.object.trustSerialData</a>
      * @since 3.15.0
      */
     public static final String COM_SUN_JNDI_LDAP_OBJECT_TRUST_SERIAL_DATA = "com.sun.jndi.ldap.object.trustSerialData";
@@ -63,7 +65,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.httpserver/com/sun/net/httpserver/spi/HttpServerProvider.html#com.sun.net.httpserver.HttpServerProvider">com.sun.net.httpserver.HttpServerProvider</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.httpserver/com/sun/net/httpserver/spi/HttpServerProvider.html#com.sun.net.httpserver.HttpServerProvider">com.sun.net.httpserver.HttpServerProvider</a>
      * @since 3.15.0
      */
     public static final String COM_SUN_NET_HTTP_SERVER_HTTP_SERVER_PROVIDER = "com.sun.net.httpserver.HttpServerProvider";
@@ -81,7 +83,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#ftp.nonProxyHosts">ftp.nonProxyHosts</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#ftp.nonProxyHosts">ftp.nonProxyHosts</a>
      * @since 3.15.0
      */
     public static final String FTP_NON_PROXY_HOST = "ftp.nonProxyHosts";
@@ -89,7 +91,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#ftp.proxyHost">ftp.proxyHost</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#ftp.proxyHost">ftp.proxyHost</a>
      * @since 3.15.0
      */
     public static final String FTP_PROXY_HOST = "ftp.proxyHost";
@@ -97,7 +99,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#ftp.proxyPort">ftp.proxyPort</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#ftp.proxyPort">ftp.proxyPort</a>
      * @since 3.15.0
      */
     public static final String FTP_PROXY_PORT = "ftp.proxyPort";
@@ -105,7 +107,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.agent">http.agent</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.agent">http.agent</a>
      * @since 3.15.0
      */
     public static final String HTTP_AGENT = "http.agent";
@@ -113,7 +115,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#auth.digest.cnonceRepeat">auth.digest.cnonceRepeat</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#auth.digest.cnonceRepeat">auth.digest.cnonceRepeat</a>
      * @since 3.15.0
      */
     public static final String HTTP_AUTH_DIGEST_CNONCE_REPEAT = "http.auth.digest.cnonceRepeat";
@@ -121,7 +123,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#reEnabledAlgorithms">http.auth.digest.reEnabledAlgorithms</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#reEnabledAlgorithms">http.auth.digest.reEnabledAlgorithms</a>
      * @since 3.15.0
      */
     public static final String HTTP_AUTH_DIGEST_RE_ENABLED_ALGORITHMS = "http.auth.digest.reEnabledAlgorithms";
@@ -130,7 +132,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.auth.digest.validateProxy">http.auth.digest.validateProxy</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.auth.digest.validateProxy">http.auth.digest.validateProxy</a>
      * @since 3.15.0
      */
     public static final String HTTP_AUTH_DIGEST_VALIDATE_PROXY = "http.auth.digest.validateProxy";
@@ -139,7 +141,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.auth.digest.validateServer">http.auth.digest.validateServer</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.auth.digest.validateServer">http.auth.digest.validateServer</a>
      * @since 3.15.0
      */
     public static final String HTTP_AUTH_DIGEST_VALIDATE_SERVER = "http.auth.digest.validateServer";
@@ -147,7 +149,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.auth.ntlm.domain">http.auth.ntlm.domain</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.auth.ntlm.domain">http.auth.ntlm.domain</a>
      * @since 3.15.0
      */
     public static final String HTTP_AUTH_NTLM_DOMAIN = "http.auth.ntlm.domain";
@@ -155,7 +157,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.keepAlive">http.keepAlive</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.keepAlive">http.keepAlive</a>
      * @since 3.15.0
      */
     public static final String HTTP_KEEP_ALIVE = "http.keepAlive";
@@ -163,7 +165,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.keepAlive.time.proxy">http.keepAlive.time.proxy</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.keepAlive.time.proxy">http.keepAlive.time.proxy</a>
      * @since 3.15.0
      */
     public static final String HTTP_KEEP_ALIVE_TIME_PROXY = "http.keepAlive.time.proxy";
@@ -171,7 +173,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.keepAlive.time.server">http.keepAlive.time.server</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.keepAlive.time.server">http.keepAlive.time.server</a>
      * @since 3.15.0
      */
     public static final String HTTP_KEEP_ALIVE_TIME_SERVER = "http.keepAlive.time.server";
@@ -179,7 +181,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.maxConnections">http.maxConnections</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.maxConnections">http.maxConnections</a>
      * @since 3.15.0
      */
     public static final String HTTP_MAX_CONNECTIONS = "http.maxConnections";
@@ -187,7 +189,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.maxRedirects">http.maxRedirects</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.maxRedirects">http.maxRedirects</a>
      * @since 3.15.0
      */
     public static final String HTTP_MAX_REDIRECTS = "http.maxRedirects";
@@ -195,7 +197,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.nonProxyHosts">http.nonProxyHosts</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.nonProxyHosts">http.nonProxyHosts</a>
      * @since 3.15.0
      */
     public static final String HTTP_NON_PROXY_HOSTS = "http.nonProxyHosts";
@@ -203,7 +205,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.proxyHost">http.proxyHost</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.proxyHost">http.proxyHost</a>
      * @since 3.15.0
      */
     public static final String HTTP_PROXY_HOST = "http.proxyHost";
@@ -211,7 +213,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#http.proxyPort">http.proxyPort</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#http.proxyPort">http.proxyPort</a>
      * @since 3.15.0
      */
     public static final String HTTP_PROXY_PORT = "http.proxyPort";
@@ -219,7 +221,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#https.proxyHost">https.proxyHost</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#https.proxyHost">https.proxyHost</a>
      * @since 3.15.0
      */
     public static final String HTTPS_PROXY_HOST = "https.proxyHost";
@@ -227,7 +229,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#https.proxyPort">https.proxyPort</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#https.proxyPort">https.proxyPort</a>
      * @since 3.15.0
      */
     public static final String HTTPS_PROXY_PORT = "https.proxyPort";
@@ -235,45 +237,55 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      * <p>
-     * Not in Java 17 and 21 (Javadoc).
+     * Not in Java 17 and above according to <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a> Javadoc.
      * </p>
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">java.awt.fonts</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static final String JAVA_AWT_FONTS = "java.awt.fonts";
 
     /**
      * The System property name {@value}.
      * <p>
-     * Not in Java 17 and 21 (Javadoc).
+     * Not in Java 17 and above according to <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a> Javadoc.
      * </p>
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">java.awt.graphicsenv</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static final String JAVA_AWT_GRAPHICSENV = "java.awt.graphicsenv";
 
     /**
      * The System property name {@value}.
      * <p>
-     * Not in Java 17 and 21 (Javadoc).
+     * Not in Java 17 and above according to <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a> Javadoc.
      * </p>
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">java.awt.headless</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static final String JAVA_AWT_HEADLESS = "java.awt.headless";
 
     /**
      * The System property name {@value}.
      * <p>
-     * Not in Java 17 and 21 (Javadoc).
+     * Not in Java 17 and above according to <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a> Javadoc.
      * </p>
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">java.awt.printerjob</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static final String JAVA_AWT_PRINTERJOB = "java.awt.printerjob";
 
     /**
      * The System property name {@value}.
+     *
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">java.class.path</a>
      */
     public static final String JAVA_CLASS_PATH = "java.class.path";
 
@@ -285,16 +297,21 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      * <p>
-     * Not in Java 21. Last seen in Java 17.
+     * Not in Java 17 and above according to <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a> Javadoc.
      * </p>
+     *
+     * @see <a href="https://bugs.openjdk.org/browse/JDK-8305998">JDK-8305998</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static final String JAVA_COMPILER = "java.compiler";
 
     /**
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/ContentHandler.html#java.content.handler.pkgs">java.content.handler.pkgs</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/ContentHandler.html#java.content.handler.pkgs">java.content.handler.pkgs</a>
      * @since 3.15.0
      */
     public static final String JAVA_CONTENT_HANDLER_PKGS = "java.content.handler.pkgs";
@@ -302,17 +319,25 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      * <p>
-     * Not in Java 17 and 21 (Javadoc).
+     * Not in Java 17 and above according to <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a> Javadoc.
      * </p>
+     *
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static final String JAVA_ENDORSED_DIRS = "java.endorsed.dirs";
 
     /**
      * The System property name {@value}.
      * <p>
-     * Not in Java 17 and 21 (Javadoc).
+     * Not in Java 17 and above according to <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a> Javadoc.
      * </p>
+     *
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static final String JAVA_EXT_DIRS = "java.ext.dirs";
 
     /**
@@ -339,7 +364,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Locale.html#java.locale.useOldISOCodes">java.locale.useOldISOCodes</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Locale.html#java.locale.useOldISOCodes">java.locale.useOldISOCodes</a>
      * @since 3.15.0
      */
     public static final String JAVA_LOCALE_USE_OLD_ISO_CODES = "java.locale.useOldISOCodes";
@@ -348,7 +373,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.preferIPv4Stack">java.net.preferIPv4Stack</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.preferIPv4Stack">java.net.preferIPv4Stack</a>
      * @since 3.15.0
      */
     public static final String JAVA_NET_PREFER_IPV4_STACK = "java.net.preferIPv4Stack";
@@ -357,7 +382,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.preferIPv6Addresses">java.net.preferIPv6Addresses</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.preferIPv6Addresses">java.net.preferIPv6Addresses</a>
      * @since 3.15.0
      */
     public static final String JAVA_NET_PREFER_IPV6_ADDRESSES = "java.net.preferIPv6Addresses";
@@ -366,7 +391,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.socks.password">java.net.socks.password</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.socks.password">java.net.socks.password</a>
      * @since 3.15.0
      */
     public static final String JAVA_NET_SOCKS_PASSWORD = "java.net.socks.password";
@@ -375,7 +400,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.socks.username">java.net.socks.username</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.socks.username">java.net.socks.username</a>
      * @since 3.15.0
      */
     public static final String JAVA_NET_SOCKS_USER_NAME = "java.net.socks.username";
@@ -384,7 +409,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.useSystemProxies">java.net.useSystemProxies</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/doc-files/net-properties.html#java.net.useSystemProxies">java.net.useSystemProxies</a>
      * @since 3.15.0
      */
     public static final String JAVA_NET_USE_SYSTEM_PROXIES = "java.net.useSystemProxies";
@@ -393,7 +418,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/channels/AsynchronousChannelGroup.html#java.nio.channels.DefaultThreadPool.initialSize">java.nio.channels.DefaultThreadPool.initialSize</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/channels/AsynchronousChannelGroup.html#java.nio.channels.DefaultThreadPool.initialSize">java.nio.channels.DefaultThreadPool.initialSize</a>
      * @since 3.15.0
      */
     public static final String JAVA_NIO_CHANNELS_DEFAULT_THREAD_POOL_INITIAL_SIZE = "java.nio.channels.DefaultThreadPool.initialSize";
@@ -402,7 +427,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/channels/AsynchronousChannelGroup.html#java.nio.channels.DefaultThreadPool.threadFactory">java.nio.channels.DefaultThreadPool.threadFactory</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/channels/AsynchronousChannelGroup.html#java.nio.channels.DefaultThreadPool.threadFactory">java.nio.channels.DefaultThreadPool.threadFactory</a>
      * @since 3.15.0
      */
     public static final String JAVA_NIO_CHANNELS_DEFAULT_THREAD_POOL_THREAD_FACTORY = "java.nio.channels.DefaultThreadPool.threadFactory";
@@ -411,7 +436,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/channels/AsynchronousChannelGroup.html#java.nio.channels.DefaultThreadPool.initialSize">java.nio.channels.DefaultThreadPool.initialSize</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/channels/AsynchronousChannelGroup.html#java.nio.channels.DefaultThreadPool.initialSize">java.nio.channels.DefaultThreadPool.initialSize</a>
      * @since 3.15.0
      */
     public static final String JAVA_NIO_CHANNELS_SPI_ASYNCHRONOUS_CHANNEL_PROVIDER = "java.nio.channels.spi.AsynchronousChannelProvider";
@@ -420,7 +445,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/channels/spi/SelectorProvider.html#java.nio.channels.spi.SelectorProvider">java.nio.channels.spi.SelectorProvider</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/channels/spi/SelectorProvider.html#java.nio.channels.spi.SelectorProvider">java.nio.channels.spi.SelectorProvider</a>
      * @since 3.15.0
      */
     public static final String JAVA_NIO_CHANNELS_SPI_SELECTOR_PROVIDER = "java.nio.channels.spi.SelectorProvider";
@@ -429,7 +454,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/spi/FileSystemProvider.html#java.nio.file.spi.DefaultFileSystemProvider">java.nio.file.spi.DefaultFileSystemProvider</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/spi/FileSystemProvider.html#java.nio.file.spi.DefaultFileSystemProvider">java.nio.file.spi.DefaultFileSystemProvider</a>
      * @since 3.15.0
      */
     public static final String JAVA_NIO_FILE_SPI_DEFAULT_FILE_SYSTEM_PROVIDER = "java.nio.file.spi.DefaultFileSystemProvider";
@@ -437,7 +462,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Properties.html#java.properties.date">java.properties.date</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Properties.html#java.properties.date">java.properties.date</a>
      * @since 3.15.0
      */
     public static final String JAVA_PROPERTIES_DATE = "java.properties.date";
@@ -445,7 +470,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/URL.html#java.protocol.handler.pkgs">java.protocol.handler.pkgs</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/URL.html#java.protocol.handler.pkgs">java.protocol.handler.pkgs</a>
      * @since 3.15.0
      */
     public static final String JAVA_PROTOCOL_HANDLER_PKGS = "java.protocol.handler.pkgs";
@@ -454,7 +479,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/server/RMIClassLoader.html#java.rmi.server.codebase">java.rmi.server.codebase</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.rmi/java/rmi/server/RMIClassLoader.html#java.rmi.server.codebase">java.rmi.server.codebase</a>
      * @since 3.15.0
      */
     public static final String JAVA_RMI_SERVER_CODEBASE = "java.rmi.server.codebase";
@@ -463,7 +488,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/server/RMISocketFactory.html#java.rmi.server.hostname">java.rmi.server.hostname</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.rmi/java/rmi/server/RMISocketFactory.html#java.rmi.server.hostname">java.rmi.server.hostname</a>
      * @since 3.15.0
      */
     public static final String JAVA_RMI_SERVER_HOST_NAME = "java.rmi.server.hostname";
@@ -472,7 +497,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/server/ObjID.html#java.rmi.server.randomIDs">java.rmi.server.randomIDs</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.rmi/java/rmi/server/ObjID.html#java.rmi.server.randomIDs">java.rmi.server.randomIDs</a>
      * @since 3.15.0
      */
     public static final String JAVA_RMI_SERVER_RANDOM_IDS = "java.rmi.server.randomIDs";
@@ -481,7 +506,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/server/RMIClassLoader.html#java.rmi.server.RMIClassLoaderSpi">java.rmi.server.RMIClassLoaderSpi</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.rmi/java/rmi/server/RMIClassLoader.html#java.rmi.server.RMIClassLoaderSpi">java.rmi.server.RMIClassLoaderSpi</a>
      * @since 3.15.0
      */
     public static final String JAVA_RMI_SERVER_RMI_CLASS_LOADER_SPI = "java.rmi.server.RMIClassLoaderSpi";
@@ -500,7 +525,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.security.auth/com/sun/security/auth/login/ConfigFile.html#java.security.auth.login.config">java.security.auth.login.config</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.security.auth/com/sun/security/auth/login/ConfigFile.html#java.security.auth.login.config">java.security.auth.login.config</a>
      * @since 3.15.0
      */
     public static final String JAVA_SECURITY_AUTH_LOGIN_CONFIG = "java.security.auth.login.config";
@@ -551,7 +576,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/SecurityManager.html#java.security.manager">java.security.manager</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/SecurityManager.html#java.security.manager">java.security.manager</a>
      * @since 3.15.0
      */
     public static final String JAVA_SECURITY_MANAGER = "java.security.manager";
@@ -560,7 +585,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/System.html#java.specification.maintenance.version">java.specification.maintenance.version</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/System.html#java.specification.maintenance.version">java.specification.maintenance.version</a>
      * @since 3.15.0
      */
     public static final String JAVA_SPECIFICATION_MAINTENANCE_VERSION = "java.specification.maintenance.version";
@@ -584,7 +609,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ClassLoader.html#java.system.class.loader">java.system.class.loader</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/ClassLoader.html#java.system.class.loader">java.system.class.loader</a>
      * @since 3.15.0
      */
     public static final String JAVA_SYSTEM_CLASS_LOADER = "java.system.class.loader";
@@ -593,7 +618,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/zone/ZoneRulesProvider.html#java.time.zone.DefaultZoneRulesProvider">java.time.zone.DefaultZoneRulesProvider</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/time/zone/ZoneRulesProvider.html#java.time.zone.DefaultZoneRulesProvider">java.time.zone.DefaultZoneRulesProvider</a>
      * @since 3.15.0
      */
     public static final String JAVA_TIME_ZONE_DEFAULT_ZONE_RULES_PROVIDER = "java.time.zone.DefaultZoneRulesProvider";
@@ -602,7 +627,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ForkJoinPool.html#java.util.concurrent.ForkJoinPool.common.exceptionHandler">java.util.concurrent.ForkJoinPool.common.exceptionHandler</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/ForkJoinPool.html#java.util.concurrent.ForkJoinPool.common.exceptionHandler">java.util.concurrent.ForkJoinPool.common.exceptionHandler</a>
      * @since 3.15.0
      */
     public static final String JAVA_UTIL_CONCURRENT_FORK_JOIN_POOL_COMMON_EXCEPTION_HANDLER = "java.util.concurrent.ForkJoinPool.common.exceptionHandler";
@@ -611,7 +636,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ForkJoinPool.html#java.util.concurrent.ForkJoinPool.common.maximumSpares">java.util.concurrent.ForkJoinPool.common.maximumSpares</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/ForkJoinPool.html#java.util.concurrent.ForkJoinPool.common.maximumSpares">java.util.concurrent.ForkJoinPool.common.maximumSpares</a>
      * @since 3.15.0
      */
     public static final String JAVA_UTIL_CONCURRENT_FORK_JOIN_POOL_COMMON_MAXIMUM_SPARES = "java.util.concurrent.ForkJoinPool.common.maximumSpares";
@@ -620,7 +645,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ForkJoinPool.html#java.util.concurrent.ForkJoinPool.common.parallelism">java.util.concurrent.ForkJoinPool.common.parallelism</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/ForkJoinPool.html#java.util.concurrent.ForkJoinPool.common.parallelism">java.util.concurrent.ForkJoinPool.common.parallelism</a>
      * @since 3.15.0
      */
     public static final String JAVA_UTIL_CONCURRENT_FORK_JOIN_POOL_COMMON_PARALLELISM = "java.util.concurrent.ForkJoinPool.common.parallelism";
@@ -629,7 +654,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ForkJoinPool.html#java.util.concurrent.ForkJoinPool.common.threadFactory">java.util.concurrent.ForkJoinPool.common.threadFactory</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/ForkJoinPool.html#java.util.concurrent.ForkJoinPool.common.threadFactory">java.util.concurrent.ForkJoinPool.common.threadFactory</a>
      * @since 3.15.0
      */
     public static final String JAVA_UTIL_CONCURRENT_FORK_JOIN_POOL_COMMON_THREAD_FACTORY = "java.util.concurrent.ForkJoinPool.common.threadFactory";
@@ -637,7 +662,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Currency.html#java.util.currency.data">java.util.currency.data</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Currency.html#java.util.currency.data">java.util.currency.data</a>
      * @since 3.15.0
      */
     public static final String JAVA_UTIL_CURRENCY_DATA = "java.util.currency.data";
@@ -646,7 +671,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.logging/java/util/logging/LogManager.html#java.util.logging.config.class">java.util.logging.config.class</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.logging/java/util/logging/LogManager.html#java.util.logging.config.class">java.util.logging.config.class</a>
      * @since 3.15.0
      */
     public static final String JAVA_UTIL_LOGGING_CONFIG_CLASS = "java.util.logging.config.class";
@@ -655,7 +680,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.logging/java/util/logging/LogManager.html#java.util.logging.config.file">java.util.logging.config.file</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.logging/java/util/logging/LogManager.html#java.util.logging.config.file">java.util.logging.config.file</a>
      * @since 3.15.0
      */
     public static final String JAVA_UTIL_LOGGING_CONFIG_FILE = "java.util.logging.config.file";
@@ -664,7 +689,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.logging/java/util/logging/SimpleFormatter.html#java.util.logging.SimpleFormatter.format">java.util.logging.SimpleFormatter.format</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.logging/java/util/logging/SimpleFormatter.html#java.util.logging.SimpleFormatter.format">java.util.logging.SimpleFormatter.format</a>
      * @since 3.15.0
      */
     public static final String JAVA_UTIL_LOGGING_SIMPLE_FORMATTER_FORMAT = "java.util.logging.simpleformatter.format";
@@ -673,7 +698,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.prefs/java/util/prefs/Preferences.html#java.util.prefs.PreferencesFactory">java.util.prefs.PreferencesFactory</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.prefs/java/util/prefs/Preferences.html#java.util.prefs.PreferencesFactory">java.util.prefs.PreferencesFactory</a>
      */
     public static final String JAVA_UTIL_PREFS_PREFERENCES_FACTORY = "java.util.prefs.PreferencesFactory";
 
@@ -681,7 +706,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/PropertyResourceBundle.html#java.util.PropertyResourceBundle.encoding">java.util.PropertyResourceBundle.encoding</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/PropertyResourceBundle.html#java.util.PropertyResourceBundle.encoding">java.util.PropertyResourceBundle.encoding</a>
      * @since 3.15.0
      */
     public static final String JAVA_UTIL_PROPERTY_RESOURCE_BUNDLE_ENCODING = "java.util.PropertyResourceBundle.encoding";
@@ -699,7 +724,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/System.html#java.vendor.version">java.vendor.version</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/System.html#java.vendor.version">java.vendor.version</a>
      * @since 3.15.0
      */
     public static final String JAVA_VENDOR_VERSION = "java.vendor.version";
@@ -712,7 +737,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/System.html#java.version.date">java.version.date</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/System.html#java.version.date">java.version.date</a>
      * @since 3.15.0
      */
     public static final String JAVA_VERSION_DATE = "java.version.date";
@@ -755,7 +780,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/module-summary.html#java.xml.config.file">java.xml</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.xml/module-summary.html#java.xml.config.file">java.xml</a>
      * @since 3.15.0
      */
     public static final String JAVA_XML_CONFIG_FILE = "java.xml.config.file";
@@ -764,7 +789,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Toolkit.html#javax.accessibility.assistive_technologies">javax.accessibility.assistive_technologies</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/awt/Toolkit.html#javax.accessibility.assistive_technologies">javax.accessibility.assistive_technologies</a>
      * @since 3.15.0
      */
     public static final String JAVAX_ACCESSIBILITY_ASSISTIVE_TECHNOLOGIES = "javax.accessibility.assistive_technologies";
@@ -773,7 +798,7 @@ public final class SystemProperties {
      * The System property name {@value}.
      *
      * @see <a href=
-     *      "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/net/ssl/SSLSessionContext.html#javax.net.ssl.sessionCacheSize">javax.net.ssl.sessionCacheSize</a>
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/javax/net/ssl/SSLSessionContext.html#javax.net.ssl.sessionCacheSize">javax.net.ssl.sessionCacheSize</a>
      * @since 3.15.0
      */
     public static final String JAVAX_NET_SSL_SESSION_CACHE_SIZE = "javax.net.ssl.sessionCacheSize";
@@ -781,7 +806,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/javax/rmi/ssl/SslRMIClientSocketFactory.html#javax.rmi.ssl.client.enabledCipherSuites">javax.rmi.ssl.client.enabledCipherSuites</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.rmi/javax/rmi/ssl/SslRMIClientSocketFactory.html#javax.rmi.ssl.client.enabledCipherSuites">javax.rmi.ssl.client.enabledCipherSuites</a>
      * @since 3.15.0
      */
     public static final String JAVAX_RMI_SSL_CLIENT_ENABLED_CIPHER_SUITES = "javax.rmi.ssl.client.enabledCipherSuites";
@@ -789,7 +814,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/javax/rmi/ssl/SslRMIClientSocketFactory.html#javax.rmi.ssl.client.enabledProtocols">javax.rmi.ssl.client.enabledProtocols</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.rmi/javax/rmi/ssl/SslRMIClientSocketFactory.html#javax.rmi.ssl.client.enabledProtocols">javax.rmi.ssl.client.enabledProtocols</a>
      * @since 3.15.0
      */
     public static final String JAVAX_RMI_SSL_CLIENT_ENABLED_PROTOCOLS = "javax.rmi.ssl.client.enabledProtocols";
@@ -797,7 +822,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.security.jgss/org/ietf/jgss/package-summary.html#javax.security.auth.useSubjectCredsOnly">javax.security.auth.useSubjectCredsOnly</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.security.jgss/org/ietf/jgss/package-summary.html#javax.security.auth.useSubjectCredsOnly">javax.security.auth.useSubjectCredsOnly</a>
      * @since 3.15.0
      */
     public static final String JAVAX_SECURITY_AUTH_USE_SUBJECT_CREDS_ONLY = "javax.security.auth.useSubjectCredsOnly";
@@ -805,7 +830,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.smartcardio/javax/smartcardio/TerminalFactory.html#javax.smartcardio.TerminalFactory.DefaultType">javax.smartcardio.TerminalFactory.DefaultType</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.smartcardio/javax/smartcardio/TerminalFactory.html#javax.smartcardio.TerminalFactory.DefaultType">javax.smartcardio.TerminalFactory.DefaultType</a>
      * @since 3.15.0
      */
     public static final String JAVAX_SMART_CARD_IO_TERMINAL_FACTORY_DEFAULT_TYPE = "javax.smartcardio.TerminalFactory.DefaultType";
@@ -813,7 +838,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/DriverManager.html#jdbc.drivers">jdbc.drivers</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.sql/java/sql/DriverManager.html#jdbc.drivers">jdbc.drivers</a>
      * @since 3.15.0
      */
     public static final String JDBC_DRIVERS = "jdbc.drivers";
@@ -821,7 +846,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.http.auth.proxying.disabledSchemes</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.http.auth.proxying.disabledSchemes</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_AUTH_PROXYING_DISABLED_SCHEMES = "jdk.http.auth.proxying.disabledSchemes";
@@ -829,7 +854,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.http.auth.tunneling.disabledSchemes</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.http.auth.tunneling.disabledSchemes</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_AUTH_TUNNELING_DISABLED_SCHEMES = "jdk.http.auth.tunneling.disabledSchemes";
@@ -837,7 +862,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.allowRestrictedHeaders</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.allowRestrictedHeaders</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_ALLOW_RESTRICTED_HEADERS = "jdk.httpclient.allowRestrictedHeaders";
@@ -845,7 +870,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.auth.retrylimit</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.auth.retrylimit</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_AUTH_RETRY_LIMIT = "jdk.httpclient.auth.retrylimit";
@@ -853,7 +878,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.bufsize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.bufsize</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_BUF_SIZE = "jdk.httpclient.bufsize";
@@ -861,7 +886,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.connectionPoolSize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.connectionPoolSize</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_CONNECTION_POOL_SIZE = "jdk.httpclient.connectionPoolSize";
@@ -869,7 +894,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.connectionWindowSize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.connectionWindowSize</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_CONNECTION_WINDOW_SIZE = "jdk.httpclient.connectionWindowSize";
@@ -877,7 +902,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.disableRetryConnect</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.disableRetryConnect</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_DISABLE_RETRY_CONNECT = "jdk.httpclient.disableRetryConnect";
@@ -885,7 +910,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.enableAllMethodRetry</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.enableAllMethodRetry</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_ENABLE_ALL_METHOD_RETRY = "jdk.httpclient.enableAllMethodRetry";
@@ -893,7 +918,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.enablepush</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.enablepush</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_ENABLE_PUSH = "jdk.httpclient.enablepush";
@@ -901,7 +926,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.hpack.maxheadertablesize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.hpack.maxheadertablesize</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_HPACK_MAX_HEADER_TABLE_SIZE = "jdk.httpclient.hpack.maxheadertablesize";
@@ -909,7 +934,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.HttpClient.log</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.HttpClient.log</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_HTTP_CLIENT_LOG = "jdk.httpclient.HttpClient.log";
@@ -917,7 +942,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.keepalive.timeout</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.keepalive.timeout</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_KEEP_ALIVE_TIMEOUT = "jdk.httpclient.keepalive.timeout";
@@ -925,7 +950,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.keepalive.timeout.h2</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.keepalive.timeout.h2</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_KEEP_ALIVE_TIMEOUT_H2 = "jdk.httpclient.keepalive.timeout.h2";
@@ -933,7 +958,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.maxframesize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.maxframesize</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_MAX_FRAME_SIZE = "jdk.httpclient.maxframesize";
@@ -941,7 +966,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.maxstreams</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.maxstreams</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_MAX_STREAMS = "jdk.httpclient.maxstreams";
@@ -949,7 +974,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.receiveBufferSize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.receiveBufferSize</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_RECEIVE_BUFFER_SIZE = "jdk.httpclient.receiveBufferSize";
@@ -957,7 +982,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.redirects.retrylimit</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.redirects.retrylimit</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_REDIRECTS_RETRY_LIMIT = "jdk.httpclient.redirects.retrylimit";
@@ -965,7 +990,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.sendBufferSize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.sendBufferSize</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_SEND_BUFFER_SIZE = "jdk.httpclient.sendBufferSize";
@@ -973,7 +998,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.websocket.writeBufferSize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.websocket.writeBufferSize</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_WEB_SOCKET_WRITE_BUFFER_SIZE = "jdk.httpclient.websocket.writeBufferSize";
@@ -981,7 +1006,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpclient.windowsize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpclient.windowsize</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_CLIENT_WINDOW_SIZE = "jdk.httpclient.windowsize";
@@ -989,7 +1014,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.httpserver.maxConnections</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.httpserver.maxConnections</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTP_SERVER_MAX_CONNECTIONS = "jdk.httpserver.maxConnections";
@@ -997,7 +1022,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.https.negotiate.cbt</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.https.negotiate.cbt</a>
      * @since 3.15.0
      */
     public static final String JDK_HTTPS_NEGOTIATE_CBT = "jdk.https.negotiate.cbt";
@@ -1005,7 +1030,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.includeInExceptions</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.includeInExceptions</a>
      * @since 3.15.0
      */
     public static final String JDK_INCLUDE_IN_EXCEPTIONS = "jdk.includeInExceptions";
@@ -1013,7 +1038,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.internal.httpclient.disableHostnameVerification</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.internal.httpclient.disableHostnameVerification</a>
      * @since 3.15.0
      */
     public static final String JDK_INTERNAL_HTTP_CLIENT_DISABLE_HOST_NAME_VERIFICATION = "jdk.internal.httpclient.disableHostnameVerification";
@@ -1021,7 +1046,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.io.permissionsUseCanonicalPath</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.io.permissionsUseCanonicalPath</a>
      * @since 3.15.0
      */
     public static final String JDK_IO_PERMISSIONS_USE_CANONICAL_PATH = "jdk.io.permissionsUseCanonicalPath";
@@ -1029,7 +1054,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.jndi.ldap.object.factoriesFilter</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.jndi.ldap.object.factoriesFilter</a>
      * @since 3.15.0
      */
     public static final String JDK_JNDI_LDAP_OBJECT_FACTORIES_FILTER = "jdk.jndi.ldap.object.factoriesFilter";
@@ -1037,7 +1062,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.jndi.object.factoriesFilter</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.jndi.object.factoriesFilter</a>
      * @since 3.15.0
      */
     public static final String JDK_JNDI_OBJECT_FACTORIES_FILTER = "jdk.jndi.object.factoriesFilter";
@@ -1045,7 +1070,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.jndi.rmi.object.factoriesFilter</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.jndi.rmi.object.factoriesFilter</a>
      * @since 3.15.0
      */
     public static final String JDK_JNDI_RMI_OBJECT_FACTORIES_FILTER = "jdk.jndi.rmi.object.factoriesFilter";
@@ -1053,7 +1078,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.module.main</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.module.main</a>
      * @since 3.15.0
      */
     public static final String JDK_MODULE_MAIN = "jdk.module.main";
@@ -1061,7 +1086,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.module.main.class</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.module.main.class</a>
      * @since 3.15.0
      */
     public static final String JDK_MODULE_MAIN_CLASS = "jdk.module.main.class";
@@ -1069,7 +1094,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.module.path</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.module.path</a>
      * @since 3.15.0
      */
     public static final String JDK_MODULE_PATH = "jdk.module.path";
@@ -1077,7 +1102,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.module.upgrade.path</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.module.upgrade.path</a>
      * @since 3.15.0
      */
     public static final String JDK_MODULE_UPGRADE_PATH = "jdk.module.upgrade.path";
@@ -1085,7 +1110,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.net.unixdomain.tmpdir</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.net.unixdomain.tmpdir</a>
      * @since 3.15.0
      */
     public static final String JDK_NET_UNIX_DOMAIN_TMPDIR = "jdk.net.unixdomain.tmpdir";
@@ -1093,7 +1118,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String JDK_NET_URL_CLASS_PATH_SHOW_IGNORED_CLASS_PATH_ENTRIES = "jdk.net.URLClassPath.showIgnoredClassPathEntries";
@@ -1101,7 +1126,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.serialFilter</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.serialFilter</a>
      * @since 3.15.0
      */
     public static final String JDK_SERIAL_FILTER = "jdk.serialFilter";
@@ -1109,7 +1134,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.serialFilterFactory</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.serialFilterFactory</a>
      * @since 3.15.0
      */
     public static final String JDK_SERIAL_FILTER_FACTORY = "jdk.serialFilterFactory";
@@ -1117,7 +1142,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.tls.client.SignatureSchemes</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.tls.client.SignatureSchemes</a>
      * @since 3.15.0
      */
     public static final String JDK_TLS_CLIENT_SIGNATURE_SCHEMES = "jdk.tls.client.SignatureSchemes";
@@ -1125,7 +1150,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.tls.namedGroups</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.tls.namedGroups</a>
      * @since 3.15.0
      */
     public static final String JDK_TLS_NAMED_GROUPS = "jdk.tls.namedGroups";
@@ -1133,7 +1158,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.tls.server.SignatureSchemes</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.tls.server.SignatureSchemes</a>
      * @since 3.15.0
      */
     public static final String JDK_TLS_SERVER_SIGNATURE_SCHEMES = "jdk.tls.server.SignatureSchemes";
@@ -1141,7 +1166,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.virtualThreadScheduler.maxPoolSize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.virtualThreadScheduler.maxPoolSize</a>
      * @since 3.15.0
      */
     public static final String JDK_VIRTUAL_THREAD_SCHEDULER_MAXPOOLSIZE = "jdk.virtualThreadScheduler.maxPoolSize";
@@ -1149,7 +1174,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.virtualThreadScheduler.parallelism</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.virtualThreadScheduler.parallelism</a>
      * @since 3.15.0
      */
     public static final String JDK_VIRTUAL_THREAD_SCHEDULER_PARALLELISM = "jdk.virtualThreadScheduler.parallelism";
@@ -1157,7 +1182,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.cdataChunkSize</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.cdataChunkSize</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_CDATA_CHUNK_SIZE = "jdk.xml.cdataChunkSize";
@@ -1165,7 +1190,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.dtd.support</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.dtd.support</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_DTD_SUPPORT = "jdk.xml.dtd.support";
@@ -1173,7 +1198,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.elementAttributeLimit</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.elementAttributeLimit</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_ELEMENT_ATTRIBUTE_LIMIT = "jdk.xml.elementAttributeLimit";
@@ -1181,7 +1206,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.enableExtensionFunctions</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.enableExtensionFunctions</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_ENABLE_EXTENSION_FUNCTIONS = "jdk.xml.enableExtensionFunctions";
@@ -1189,7 +1214,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.entityExpansionLimit</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.entityExpansionLimit</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_ENTITY_EXPANSION_LIMIT = "jdk.xml.entityExpansionLimit";
@@ -1197,7 +1222,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.entityReplacementLimi_t</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.entityReplacementLimi_t</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_ENTITY_REPLACEMENT_LIMIT = "jdk.xml.entityReplacementLimi_t";
@@ -1205,7 +1230,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.isStandalone</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.isStandalone</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_IS_STANDALONE = "jdk.xml.isStandalone";
@@ -1213,7 +1238,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.jdkcatalog.resolve</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.jdkcatalog.resolve</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_JDK_CATALOG_RESOLVE = "jdk.xml.jdkcatalog.resolve";
@@ -1221,7 +1246,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.maxElementDepth</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.maxElementDepth</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_MAX_ELEMENT_DEPTH = "jdk.xml.maxElementDepth";
@@ -1229,7 +1254,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.maxGeneralEntitySizeLimit</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.maxGeneralEntitySizeLimit</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_MAX_GENERAL_ENTITY_SIZE_LIMIT = "jdk.xml.maxGeneralEntitySizeLimit";
@@ -1237,7 +1262,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.maxOccurLimit</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.maxOccurLimit</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_MAX_OCCUR_LIMIT = "jdk.xml.maxOccurLimit";
@@ -1245,7 +1270,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.maxParameterEntitySizeLimit</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.maxParameterEntitySizeLimit</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_MAX_PARAMETER_ENTITY_SIZE_LIMIT = "jdk.xml.maxParameterEntitySizeLimit";
@@ -1253,7 +1278,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.maxXMLNameLimit</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.maxXMLNameLimit</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_MAX_XML_NAME_LIMIT = "jdk.xml.maxXMLNameLimit";
@@ -1261,7 +1286,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.overrideDefaultParser</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.overrideDefaultParser</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_OVERRIDE_DEFAULT_PARSER = "jdk.xml.overrideDefaultParser";
@@ -1269,7 +1294,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.resetSymbolTable</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.resetSymbolTable</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_RESET_SYMBOL_TABLE = "jdk.xml.resetSymbolTable";
@@ -1277,7 +1302,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.totalEntitySizeLimit</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.totalEntitySizeLimit</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_TOTAL_ENTITY_SIZE_LIMIT = "jdk.xml.totalEntitySizeLimit";
@@ -1285,7 +1310,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">jdk.xml.xsltcIsStandalone</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">jdk.xml.xsltcIsStandalone</a>
      * @since 3.15.0
      */
     public static final String JDK_XML_XSLTC_IS_STANDALONE = "jdk.xml.xsltcIsStandalone";
@@ -1298,7 +1323,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">native.encoding</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">native.encoding</a>
      * @since 3.15.0
      */
     public static final String NATIVE_ENCODING = "native.encoding";
@@ -1306,7 +1331,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">networkaddress.cache.negative.ttl</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">networkaddress.cache.negative.ttl</a>
      * @since 3.15.0
      */
     public static final String NETWORK_ADDRESS_CACHE_NEGATIVE_TTL = "networkaddress.cache.negative.ttl";
@@ -1314,7 +1339,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">networkaddress.cache.stale.ttl</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">networkaddress.cache.stale.ttl</a>
      * @since 3.15.0
      */
     public static final String NETWORK_ADDRESS_CACHE_STALE_TTL = "networkaddress.cache.stale.ttl";
@@ -1322,7 +1347,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">networkaddress.cache.ttl</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">networkaddress.cache.ttl</a>
      * @since 3.15.0
      */
     public static final String NETWORK_ADDRESS_CACHE_TTL = "networkaddress.cache.ttl";
@@ -1330,7 +1355,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">org.jcp.xml.dsig.securevalidation</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">org.jcp.xml.dsig.securevalidation</a>
      * @since 3.15.0
      */
     public static final String ORG_JCP_XML_DSIG_SECURE_VALIDATION = "org.jcp.xml.dsig.securevalidation";
@@ -1338,7 +1363,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">org.openjdk.java.util.stream.tripwire</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">org.openjdk.java.util.stream.tripwire</a>
      * @since 3.15.0
      */
     public static final String ORG_OPENJDK_JAVA_UTIL_STREAM_TRIPWIRE = "org.openjdk.java.util.stream.tripwire";
@@ -1366,7 +1391,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SOCKS_PROXY_HOST = "socksProxyHost";
@@ -1374,7 +1399,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SOCKS_PROXY_PORT = "socksProxyPort";
@@ -1382,7 +1407,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SOCKS_PROXY_VERSION = "socksProxyVersion";
@@ -1390,7 +1415,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String STDERR_ENCODING = "stderr.encoding";
@@ -1398,7 +1423,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String STDOUT_ENCODING = "stdout.encoding";
@@ -1406,7 +1431,9 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href=
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.httpserver/module-summary.html#sun.net.httpserver.drainAmount">sun.net.httpserver.drainAmount</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SUN_NET_HTTP_SERVER_DRAIN_AMOUNT = "sun.net.httpserver.drainAmount";
@@ -1414,7 +1441,9 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href=
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.httpserver/module-summary.html#sun.net.httpserver.idleInterval">sun.net.httpserver.idleInterval</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SUN_NET_HTTP_SERVER_IDLE_INTERVAL = "sun.net.httpserver.idleInterval";
@@ -1422,7 +1451,9 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href=
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.httpserver/module-summary.html#sun.net.httpserver.maxIdleConnections">sun.net.httpserver.maxIdleConnections</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SUN_NET_HTTP_SERVER_MAX_IDLE_CONNECTIONS = "sun.net.httpserver.maxIdleConnections";
@@ -1430,7 +1461,9 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href=
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.httpserver/module-summary.html#sun.net.httpserver.maxReqHeaders">sun.net.httpserver.maxReqHeaders</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SUN_NET_HTTP_SERVER_MAX_REQ_HEADERS = "sun.net.httpserver.maxReqHeaders";
@@ -1438,7 +1471,9 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href=
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.httpserver/module-summary.html#sun.net.httpserver.maxReqTime">sun.net.httpserver.maxReqTime</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SUN_NET_HTTP_SERVER_MAX_REQ_TIME = "sun.net.httpserver.maxReqTime";
@@ -1446,7 +1481,9 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href=
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.httpserver/module-summary.html#sun.net.httpserver.maxRspTime">sun.net.httpserver.maxRspTime</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SUN_NET_HTTP_SERVER_MAX_RSP_TIME = "sun.net.httpserver.maxRspTime";
@@ -1454,7 +1491,9 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href=
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.httpserver/module-summary.html#sun.net.httpserver.nodelay">sun.net.httpserver.nodelay</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SUN_NET_HTTP_SERVER_NO_DELAY = "sun.net.httpserver.nodelay";
@@ -1462,7 +1501,9 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href=
+     *      "https://docs.oracle.com/en/java/javase/25/docs/api/jdk.httpserver/module-summary.html#sun.security.krb5.principal">sun.security.krb5.principal</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String SUN_SECURITY_KRB5_PRINCIPAL = "sun.security.krb5.principal";
@@ -1480,7 +1521,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String USER_EXTENSIONS = "user.extensions";
@@ -1508,7 +1549,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String USER_SCRIPT = "user.script";
@@ -1521,7 +1562,7 @@ public final class SystemProperties {
     /**
      * The System property name {@value}.
      *
-     * @see <a href="https://docs.oracle.com/en/java/javase/21/docs/api/system-properties.html">System Properties</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
      * @since 3.15.0
      */
     public static final String USER_VARIANT = "user.variant";
@@ -1546,17 +1587,41 @@ public final class SystemProperties {
      * </p>
      *
      * @return The system property value or {@code null} if the property is absent or a security problem occurs.
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @see #AWT_TOOLKIT
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static String getAwtToolkit() {
         return getProperty(AWT_TOOLKIT);
     }
 
     /**
-     * Gets the current value for the property named {@code key} as an {@code boolean}.
+     * Gets the current value for the property named {@code "SimpleClassName.Key"} as a {@code boolean}.
+     * <p>
+     * If a {@link SecurityException} is caught, the return value is {@code null}.
+     * </p>
      *
-     * @param key             The key
-     * @param defaultIfAbsent The default value
-     * @return an {@code boolean} or defaultIfAbsent
+     * @param clazz           The Class to use for the SimpleClassName.
+     * @param key             The subkey.
+     * @param defaultIfAbsent The default value.
+     * @return an int or defaultIfAbsent.
+     * @see Class#getSimpleName()
+     * @since 3.19.0
+     */
+    public static boolean getBoolean(final Class<?> clazz, final String key, final BooleanSupplier defaultIfAbsent) {
+        return getBoolean(toKey(clazz, key, true), defaultIfAbsent);
+    }
+
+    /**
+     * Gets the current value for the property named {@code key} as an {@code boolean}.
+     * <p>
+     * If a {@link SecurityException} is caught, the return value is {@code null}.
+     * </p>
+     *
+     * @param key             The key.
+     * @param defaultIfAbsent The default value.
+     * @return an {@code boolean} or defaultIfAbsent.
      */
     public static boolean getBoolean(final String key, final BooleanSupplier defaultIfAbsent) {
         final String str = getProperty(key);
@@ -1864,11 +1929,31 @@ public final class SystemProperties {
     }
 
     /**
-     * Gets the current value for the property named {@code key} as an {@code int}.
+     * Gets the current value for the property named {@code "SimpleClassName.Key"} as an {@code int}.
+     * <p>
+     * If a {@link SecurityException} is caught, the return value is {@code null}.
+     * </p>
      *
-     * @param key             The key
-     * @param defaultIfAbsent The default value
-     * @return an {@code int} or defaultIfAbsent
+     * @param clazz           The Class to use for the SimpleClassName.
+     * @param key             The subkey.
+     * @param defaultIfAbsent The default value.
+     * @return an int or defaultIfAbsent.
+     * @see Class#getSimpleName()
+     * @since 3.19.0
+     */
+    public static int getInt(final Class<?> clazz, final String key, final IntSupplier defaultIfAbsent) {
+        return getInt(toKey(clazz, key, true), defaultIfAbsent);
+    }
+
+    /**
+     * Gets the current value for the property named {@code key} as an {@code int}.
+     * <p>
+     * If a {@link SecurityException} is caught, the return value is {@code null}.
+     * </p>
+     *
+     * @param key             The key.
+     * @param defaultIfAbsent The default value.
+     * @return an {@code int} or defaultIfAbsent.
      */
     public static int getInt(final String key, final IntSupplier defaultIfAbsent) {
         final String str = getProperty(key);
@@ -1882,7 +1967,11 @@ public final class SystemProperties {
      * </p>
      *
      * @return The system property value or {@code null} if the property is absent or a security problem occurs.
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @see #JAVA_AWT_FONTS
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static String getJavaAwtFonts() {
         return getProperty(JAVA_AWT_FONTS);
     }
@@ -1894,7 +1983,10 @@ public final class SystemProperties {
      * </p>
      *
      * @return The system property value or {@code null} if the property is absent or a security problem occurs.
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static String getJavaAwtGraphicsenv() {
         return getProperty(JAVA_AWT_GRAPHICSENV);
     }
@@ -1906,7 +1998,11 @@ public final class SystemProperties {
      * </p>
      *
      * @return The system property value or {@code null} if the property is absent or a security problem occurs.
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @see #JAVA_AWT_HEADLESS
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static String getJavaAwtHeadless() {
         return getProperty(JAVA_AWT_HEADLESS);
     }
@@ -1918,7 +2014,11 @@ public final class SystemProperties {
      * </p>
      *
      * @return The system property value or {@code null} if the property is absent or a security problem occurs.
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @see #JAVA_AWT_PRINTERJOB
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static String getJavaAwtPrinterjob() {
         return getProperty(JAVA_AWT_PRINTERJOB);
     }
@@ -1930,6 +2030,8 @@ public final class SystemProperties {
      * </p>
      *
      * @return The system property value or {@code null} if the property is absent or a security problem occurs.
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">java.class.path</a>
+     * @see #JAVA_CLASS_PATH
      */
     public static String getJavaClassPath() {
         return getProperty(JAVA_CLASS_PATH);
@@ -1954,7 +2056,11 @@ public final class SystemProperties {
      * </p>
      *
      * @return The system property value or {@code null} if the property is absent or a security problem occurs.
+     * @see <a href="https://bugs.openjdk.org/browse/JDK-8305998">JDK-8305998</a>
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static String getJavaCompiler() {
         return getProperty(JAVA_COMPILER);
     }
@@ -1979,7 +2085,10 @@ public final class SystemProperties {
      * </p>
      *
      * @return The system property value or {@code null} if the property is absent or a security problem occurs.
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static String getJavaEndorsedDirs() {
         return getProperty(JAVA_ENDORSED_DIRS);
     }
@@ -1991,7 +2100,11 @@ public final class SystemProperties {
      * </p>
      *
      * @return The system property value or {@code null} if the property is absent or a security problem occurs.
+     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/system-properties.html">System Properties</a>
+     * @see #JAVA_EXT_DIRS
+     * @deprecated Deprecated without replacement.
      */
+    @Deprecated
     public static String getJavaExtDirs() {
         return getProperty(JAVA_EXT_DIRS);
     }
@@ -3580,11 +3693,31 @@ public final class SystemProperties {
     }
 
     /**
-     * Gets the current value for the property named {@code key} as a {@code long}.
+     * Gets the current value for the property named {@code "SimpleClassName.Key"} as a {@code long}.
+     * <p>
+     * If a {@link SecurityException} is caught, the return value is {@code null}.
+     * </p>
      *
-     * @param key             The key
-     * @param defaultIfAbsent The default value
-     * @return a {@code long} or defaultIfAbsent
+     * @param clazz           The Class to use for the SimpleClassName.
+     * @param key             The subkey.
+     * @param defaultIfAbsent The default value.
+     * @return a long or defaultIfAbsent.
+     * @see Class#getSimpleName()
+     * @since 3.19.0
+     */
+    public static long getLong(final Class<?> clazz, final String key, final LongSupplier defaultIfAbsent) {
+        return getLong(toKey(clazz, key, true), defaultIfAbsent);
+    }
+
+    /**
+     * Gets the current value for the property named {@code key} as a {@code long}.
+     * <p>
+     * If a {@link SecurityException} is caught, the return value is {@code null}.
+     * </p>
+     *
+     * @param key             The key.
+     * @param defaultIfAbsent The default value.
+     * @return a {@code long} or defaultIfAbsent.
      */
     public static long getLong(final String key, final LongSupplier defaultIfAbsent) {
         final String str = getProperty(key);
@@ -4091,6 +4224,10 @@ public final class SystemProperties {
      */
     public static boolean isPropertySet(final String property) {
         return getProperty(property) != null;
+    }
+
+    private static String toKey(final Class<?> clazz, final String key, final boolean simpleKey) {
+        return ClassUtils.getName(clazz, StringUtils.EMPTY, simpleKey) + "." + key;
     }
 
     /**
