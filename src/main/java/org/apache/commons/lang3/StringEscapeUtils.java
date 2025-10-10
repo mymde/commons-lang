@@ -38,7 +38,7 @@ import org.apache.commons.lang3.text.translate.UnicodeUnpairedSurrogateRemover;
  * @since 2.0
  * @deprecated As of 3.6, use Apache Commons Text
  * <a href="https://commons.apache.org/proper/commons-text/javadocs/api-release/org/apache/commons/text/StringEscapeUtils.html">
- * StringEscapeUtils</a> instead
+ * StringEscapeUtils</a> instead.
  */
 @Deprecated
 public class StringEscapeUtils {
@@ -167,7 +167,7 @@ public class StringEscapeUtils {
      * as the foundation for a custom translator.
      *
      * @since 3.0
-     * @deprecated use {@link #ESCAPE_XML10} or {@link #ESCAPE_XML11} instead.
+     * @deprecated Use {@link #ESCAPE_XML10} or {@link #ESCAPE_XML11} instead.
      */
     @Deprecated
     public static final CharSequenceTranslator ESCAPE_XML =
@@ -569,7 +569,7 @@ public class StringEscapeUtils {
      * @param input  the {@link String} to escape, may be null
      * @return a new escaped {@link String}, {@code null} if null string input
      * @see #unescapeXml(String)
-     * @deprecated use {@link #escapeXml10(java.lang.String)} or {@link #escapeXml11(java.lang.String)} instead.
+     * @deprecated Use {@link #escapeXml10(java.lang.String)} or {@link #escapeXml11(java.lang.String)} instead.
      */
     @Deprecated
     public static final String escapeXml(final String input) {

@@ -572,8 +572,8 @@ public class SystemUtils {
      * </p>
      *
      * @see SystemProperties#getLineSeparator()
-     * @deprecated Use {@link System#lineSeparator()} instead, since it does not require a privilege check.
      * @since Java 1.1
+     * @deprecated Use {@link System#lineSeparator()} instead, since it does not require a privilege check.
      */
     @Deprecated
     public static final String LINE_SEPARATOR = SystemProperties.getLineSeparator();
@@ -638,9 +638,9 @@ public class SystemUtils {
      * </p>
      *
      * @see SystemProperties#getPathSeparator()
+     * @since Java 1.1
      * @deprecated Use {@link File#pathSeparator}, since it is guaranteed to be a string containing a single character and it does not require a privilege
      *             check.
-     * @since Java 1.1
      */
     @Deprecated
     public static final String PATH_SEPARATOR = SystemProperties.getPathSeparator();
@@ -1138,6 +1138,22 @@ public class SystemUtils {
      * @since 3.18.0
      */
     public static final boolean IS_JAVA_24 = getJavaVersionMatches("24");
+
+    /**
+     * The constant {@code true} if this is Java version 25 (also 25.x versions).
+     * <p>
+     * The result depends on the value of the {@link #JAVA_SPECIFICATION_VERSION} constant.
+     * </p>
+     * <p>
+     * The field will return {@code false} if {@link #JAVA_SPECIFICATION_VERSION} is {@code null}.
+     * </p>
+     * <p>
+     * This value is initialized when the class is loaded.
+     * </p>
+     *
+     * @since 3.20.0
+     */
+    public static final boolean IS_JAVA_25 = getJavaVersionMatches("25");
 
     // Operating system checks
     // -----------------------------------------------------------------------
@@ -2306,7 +2322,7 @@ public class SystemUtils {
     }
 
     /**
-     * Tests whether the Java version at least the requested version.
+     * Tests whether the Java version is at least the requested version.
      * <p>
      * The result is based on the system property saved in {@link #JAVA_SPECIFICATION_VERSION}.
      * </p>
@@ -2319,7 +2335,7 @@ public class SystemUtils {
     }
 
     /**
-     * Tests whether the Java version at most the requested version.
+     * Tests whether the Java version is at most the requested version.
      * <p>
      * The result is based on the system property saved in {@link #JAVA_SPECIFICATION_VERSION}.
      * </p>
